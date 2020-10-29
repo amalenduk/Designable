@@ -1,0 +1,6 @@
+framework module Pods_Designable_Tests {
+  umbrella header "Pods-Designable_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

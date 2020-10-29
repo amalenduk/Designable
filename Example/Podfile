@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Designable_Example' do
+  pod 'Designable', :path => '../'
+
+  target 'Designable_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

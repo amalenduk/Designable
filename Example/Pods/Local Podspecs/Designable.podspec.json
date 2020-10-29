@@ -1,0 +1,22 @@
+{
+  "name": "Designable",
+  "version": "0.1.0",
+  "summary": "A short description of Designable.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Amalendu Kar/Designable",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Amalendu Kar": "shipraindia.tech@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Amalendu Kar/Designable.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Designable/Classes/**/*"
+}

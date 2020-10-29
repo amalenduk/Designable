@@ -1,0 +1,16 @@
+PODS:
+  - Designable (0.1.0)
+
+DEPENDENCIES:
+  - Designable (from `../`)
+
+EXTERNAL SOURCES:
+  Designable:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Designable: 7c902fb58e48338935ceefd8886f52cab3ce0362
+
+PODFILE CHECKSUM: 009f1ac6528c6abe3492b53bc7bed109db84ae5f
+
+COCOAPODS: 1.10.0.beta.1

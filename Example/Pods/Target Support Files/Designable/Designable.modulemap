@@ -1,0 +1,6 @@
+framework module Designable {
+  umbrella header "Designable-umbrella.h"
+
+  export *
+  module * { export * }
+}
