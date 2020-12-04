@@ -14,6 +14,10 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		77979A93AE91815080E907C9 /* Pods_Designable_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C16FDE928D5B495B4F47D44 /* Pods_Designable_Tests.framework */; };
+		F4B374D8257A957F0067B06F /* ExamplesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B374D7257A957F0067B06F /* ExamplesTableViewController.swift */; };
+		F4B374DA257A96030067B06F /* Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B374D9257A96030067B06F /* Examples.swift */; };
+		F4B374DC257A96AD0067B06F /* ViewExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B374DB257A96AD0067B06F /* ViewExamplesViewController.swift */; };
+		F4B374DE257A9E590067B06F /* ImageViewExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B374DD257A9E590067B06F /* ImageViewExamplesViewController.swift */; };
 		FB5878482D0D2BD6C385731A /* Pods_Designable_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE7AF1CD38C61C7FDD19B43 /* Pods_Designable_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +51,10 @@
 		B1A843C86FB1C5CBBF78BBA0 /* Designable.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Designable.podspec; path = ../Designable.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B33F81CE2A8A5E7AE926B3D8 /* Pods-Designable_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Designable_Example.release.xcconfig"; path = "Target Support Files/Pods-Designable_Example/Pods-Designable_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EC0EE8194596BEE22B2ECF2D /* Pods-Designable_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Designable_Example.debug.xcconfig"; path = "Target Support Files/Pods-Designable_Example/Pods-Designable_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		F4B374D7257A957F0067B06F /* ExamplesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesTableViewController.swift; sourceTree = "<group>"; };
+		F4B374D9257A96030067B06F /* Examples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Examples.swift; sourceTree = "<group>"; };
+		F4B374DB257A96AD0067B06F /* ViewExamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExamplesViewController.swift; sourceTree = "<group>"; };
+		F4B374DD257A9E590067B06F /* ImageViewExamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExamplesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,12 +110,13 @@
 		607FACD21AFB9204008FA782 /* Example for Designable */ = {
 			isa = PBXGroup;
 			children = (
+				F4B374D6257A95580067B06F /* ViewControllers */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				F4B374D9257A96030067B06F /* Examples.swift */,
 			);
 			name = "Example for Designable";
 			path = Designable;
@@ -157,6 +166,17 @@
 				6056FB61FC5D9F394EC1858B /* Pods-Designable_Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F4B374D6257A95580067B06F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4B374D7257A957F0067B06F /* ExamplesTableViewController.swift */,
+				F4B374DB257A96AD0067B06F /* ViewExamplesViewController.swift */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				F4B374DD257A9E590067B06F /* ImageViewExamplesViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,8 +350,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4B374DE257A9E590067B06F /* ImageViewExamplesViewController.swift in Sources */,
+				F4B374DC257A96AD0067B06F /* ViewExamplesViewController.swift in Sources */,
+				F4B374DA257A96030067B06F /* Examples.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				F4B374D8257A957F0067B06F /* ExamplesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
