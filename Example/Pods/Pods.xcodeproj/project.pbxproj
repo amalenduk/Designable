@@ -31,6 +31,8 @@
 		F4252C3A254B040E009E34C1 /* DesignableShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4252C2A254B040E009E34C1 /* DesignableShadow.swift */; };
 		F4252C3B254B040E009E34C1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4252C2B254B040E009E34C1 /* Utils.swift */; };
 		F4252C3C254B040E009E34C1 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4252C2D254B040E009E34C1 /* Font.swift */; };
+		F44A8C57257B5486008A96BB /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44A8C56257B5486008A96BB /* CALayer+Extension.swift */; };
+		F4B3DD60258CEDB00021D812 /* DesignableDashedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3DD5F258CEDB00021D812 /* DesignableDashedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		F4252C2A254B040E009E34C1 /* DesignableShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableShadow.swift; sourceTree = "<group>"; };
 		F4252C2B254B040E009E34C1 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		F4252C2D254B040E009E34C1 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		F44A8C56257B5486008A96BB /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		F4B3DD5F258CEDB00021D812 /* DesignableDashedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableDashedView.swift; sourceTree = "<group>"; };
 		F668A347901D2F523085FBE249FC3412 /* Designable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Designable-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -258,6 +262,7 @@
 				F4252C13254B040E009E34C1 /* Designable */,
 				F4252C2B254B040E009E34C1 /* Utils.swift */,
 				F4252C2C254B040E009E34C1 /* Font */,
+				F44A8C56257B5486008A96BB /* CALayer+Extension.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				F4252C1F254B040E009E34C1 /* DesignableView.swift */,
+				F4B3DD5F258CEDB00021D812 /* DesignableDashedView.swift */,
 			);
 			path = DesignableView;
 			sourceTree = "<group>";
@@ -538,6 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4252C35254B040E009E34C1 /* DesignableFlatButton.swift in Sources */,
+				F4B3DD60258CEDB00021D812 /* DesignableDashedView.swift in Sources */,
 				F4252C38254B040E009E34C1 /* DesignableBorder.swift in Sources */,
 				F4252C37254B040E009E34C1 /* DesignableCorner.swift in Sources */,
 				F4252C34254B040E009E34C1 /* DesignableView.swift in Sources */,
@@ -547,6 +554,7 @@
 				F4252C39254B040E009E34C1 /* Designable.swift in Sources */,
 				F4252C3A254B040E009E34C1 /* DesignableShadow.swift in Sources */,
 				1FD0EC8769751DBC9ADF9F1CBA1F5A3D /* Designable-dummy.m in Sources */,
+				F44A8C57257B5486008A96BB /* CALayer+Extension.swift in Sources */,
 				F4252C31254B040E009E34C1 /* GradientView.swift in Sources */,
 				F4252C2E254B040E009E34C1 /* Color.swift in Sources */,
 				F4252C3C254B040E009E34C1 /* Font.swift in Sources */,

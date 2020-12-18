@@ -119,7 +119,8 @@ open class DesignableButton: UIButton {
             return layer.cornerRadius
         }
         set {
-            layer.cornerRadius = fullyRoundedCorners ? frame.size.height / 2 : newValue
+            layer.roundCorners(with: fullyRoundedCorners ? frame.size.height / 2 : newValue)
+            // layer.cornerRadius = fullyRoundedCorners ? frame.size.height / 2 : newValue
         }
     }
     
@@ -131,6 +132,15 @@ open class DesignableButton: UIButton {
         didSet {
             cornerRadius = fullyRoundedCorners ? frame.size.height / 2 : cornerRadius
         }
+    }
+
+    // MARK: - Additional Helpers
+
+    open func addSpaceBetweenImageAndTitle(spacing: CGFloat) {
+        let insetAmount = spacing / 2
+        imageEdgeInsets = UIEdgeInsets(top: 0, left: -insetAmount, bottom: 0, right: title(for: state) == nil || attributedTitle(for: state) == nil ? 0 : insetAmount)
+        titleEdgeInsets = UIEdgeInsets(top: 0, left: image(for: state) == nil ? 0 : insetAmount, bottom: 0, right: -insetAmount)
+        contentEdgeInsets = UIEdgeInsets(top: 0, left: insetAmount, bottom: 0, right: insetAmount)
     }
 }
 
@@ -175,6 +185,11 @@ extension DesignableButton {
     open override func layoutSubviews() {
         super.layoutSubviews()
         
+        updateCornerRadius()
+    }
+
+    open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+
         updateCornerRadius()
     }
 }

@@ -1,6 +1,5 @@
 //
-//  Examples.swift
-//  Designable
+//  CALayer+Extension.swift
 //
 //  Copyright (c) 2020 Amalendu Kar
 //
@@ -24,20 +23,25 @@
 //
 
 import Foundation
+import UIKit
 
-struct Examples {
-    var title: String
-    var viewControllerIdentifier: String
-    
-    init(title: String, viewControllerIdentifier: String) {
-        self.title = title
-        self.viewControllerIdentifier = viewControllerIdentifier
-    }
-    
-    static var allExamples: [Examples] {
-        let viewExamples = Examples(title: "View Examples", viewControllerIdentifier: "ViewExamplesViewController")
-        let imageViewExamples = Examples(title: "Image View Examples", viewControllerIdentifier: "ImageViewExamplesViewController")
-        let buttonExamples = Examples(title: "Button Examples", viewControllerIdentifier: "ButtonExamplesViewController")
-        return [viewExamples, imageViewExamples, buttonExamples]
+public extension CALayer {
+    func roundCorners(with radius: CGFloat) {
+        cornerRadius = radius
+        masksToBounds = false
+        sublayers?.filter{ $0.frame.equalTo(self.bounds) }
+            .forEach{ $0.cornerRadius = self.cornerRadius }
+        self.contents = nil
+        if let sublayer = sublayers?.first,
+            sublayer.name == "designableShadowLayer" {
+            sublayer.removeFromSuperlayer()
+        }
+        let contentLayer = CALayer()
+        contentLayer.name = "designableShadowLayer"
+        contentLayer.contents = contents
+        contentLayer.frame = bounds
+        contentLayer.cornerRadius = cornerRadius
+        contentLayer.masksToBounds = true
+        insertSublayer(contentLayer, at: 0)
     }
 }

@@ -119,7 +119,8 @@ open class DesignableView: UIView {
             return layer.cornerRadius
         }
         set {
-            layer.cornerRadius = fullyRoundedCorners ? frame.size.height / 2 : newValue
+            layer.roundCorners(with: fullyRoundedCorners ? frame.size.height / 2 : newValue)
+            // layer.cornerRadius = fullyRoundedCorners ? frame.size.height / 2 : newValue
         }
     }
     
@@ -174,6 +175,11 @@ extension DesignableView {
     
     open override func layoutSubviews() {
         super.layoutSubviews()
+        
+        updateCornerRadius()
+    }
+    
+    open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         
         updateCornerRadius()
     }

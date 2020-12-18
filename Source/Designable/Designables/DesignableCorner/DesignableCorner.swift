@@ -39,7 +39,8 @@ public extension DesignableCorner where Self: UIView {
     /// Update cornerRadius of the  view
     func updateCornerRadius() {
         layoutIfNeeded()
-        self.layer.cornerRadius = fullyRoundedCorners ? frame.height / 2 : cornerRadius
+        self.layer.roundCorners(with: fullyRoundedCorners ? frame.height / 2 : cornerRadius)
+        // self.layer.cornerRadius = fullyRoundedCorners ? frame.height / 2 : cornerRadius
     }
 }
 
@@ -47,7 +48,8 @@ public extension DesignableCorner where Self: UIButton {
     
     /// Update cornerRadius of the  button
     func updateCornerRadius() {
-        self.layer.cornerRadius = fullyRoundedCorners ? frame.height / 2 : cornerRadius
+        self.layer.roundCorners(with: fullyRoundedCorners ? frame.height / 2 : cornerRadius)
+        // self.layer.cornerRadius = fullyRoundedCorners ? frame.height / 2 : cornerRadius
     }
 }
 
@@ -55,6 +57,7 @@ public extension DesignableCorner where Self: UIImageView {
     
     /// Updates cornerRadius of  the image view
     func updateCornerRadius() {
-        self.layer.cornerRadius = fullyRoundedCorners ? frame.height / 2 : cornerRadius
+        self.layer.roundCorners(with: fullyRoundedCorners ? frame.height / 2 : cornerRadius)
+        // self.layer.cornerRadius = fullyRoundedCorners ? frame.height / 2 : cornerRadius
     }
 }

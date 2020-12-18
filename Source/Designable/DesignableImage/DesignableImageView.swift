@@ -119,7 +119,8 @@ open class DesignableImageView: UIImageView {
             return layer.cornerRadius
         }
         set {
-            layer.cornerRadius = fullyRoundedCorners ? frame.size.height / 2 : newValue
+            layer.roundCorners(with: fullyRoundedCorners ? frame.size.height / 2 : newValue)
+            // layer.cornerRadius = fullyRoundedCorners ? frame.size.height / 2 : newValue
         }
     }
     
@@ -174,6 +175,11 @@ extension DesignableImageView {
     
     open override func layoutSubviews() {
         super.layoutSubviews()
+        
+        updateCornerRadius()
+    }
+
+    open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         
         updateCornerRadius()
     }

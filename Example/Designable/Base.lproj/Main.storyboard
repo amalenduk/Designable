@@ -187,13 +187,6 @@
                                             <constraint firstAttribute="width" secondItem="aCV-5b-FdX" secondAttribute="height" multiplier="1:1" id="4jR-Zf-cKs"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
@@ -205,6 +198,13 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                 <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -335,22 +335,68 @@
                                             <constraint firstAttribute="width" secondItem="kv6-4x-oZP" secondAttribute="height" multiplier="16:9" id="esv-uX-8Kw"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face" translatesAutoresizingMaskIntoConstraints="NO" id="MYD-Vx-f2f" customClass="DesignableImageView" customModule="Designable">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face" translatesAutoresizingMaskIntoConstraints="NO" id="MYD-Vx-f2f" customClass="DesignableImageView" customModule="Designable">
                                         <rect key="frame" x="112.5" y="136" width="150" height="150"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="Did-U6-yZd"/>
                                             <constraint firstAttribute="height" constant="150" id="atF-yJ-SCW"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face" translatesAutoresizingMaskIntoConstraints="NO" id="4li-dY-Ht6" customClass="DesignableImageView" customModule="Designable">
+                                        <rect key="frame" x="112.5" y="318" width="150" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="SaP-jK-dIW"/>
+                                            <constraint firstAttribute="height" constant="150" id="i3T-DK-3Yf"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="kv6-4x-oZP" secondAttribute="trailing" id="9y5-Uk-DUD"/>
                                     <constraint firstItem="kv6-4x-oZP" firstAttribute="top" secondItem="gcw-La-gTE" secondAttribute="top" id="PYv-5P-KlL"/>
+                                    <constraint firstItem="4li-dY-Ht6" firstAttribute="centerX" secondItem="gcw-La-gTE" secondAttribute="centerX" id="QS4-Oa-Pb2"/>
+                                    <constraint firstItem="4li-dY-Ht6" firstAttribute="top" secondItem="MYD-Vx-f2f" secondAttribute="bottom" constant="32" id="Tu8-Qg-mVk"/>
+                                    <constraint firstAttribute="bottom" secondItem="4li-dY-Ht6" secondAttribute="bottom" constant="32" id="V2c-oU-vGO"/>
                                     <constraint firstItem="kv6-4x-oZP" firstAttribute="leading" secondItem="gcw-La-gTE" secondAttribute="leading" id="VkJ-71-fxk"/>
                                     <constraint firstItem="MYD-Vx-f2f" firstAttribute="centerX" secondItem="gcw-La-gTE" secondAttribute="centerX" id="jdf-00-N6k"/>
                                     <constraint firstItem="kv6-4x-oZP" firstAttribute="centerX" secondItem="gcw-La-gTE" secondAttribute="centerX" id="mmr-dg-bHs"/>
-                                    <constraint firstAttribute="bottom" secondItem="kv6-4x-oZP" secondAttribute="bottom" constant="32" id="pqx-cT-VGD"/>
                                     <constraint firstItem="MYD-Vx-f2f" firstAttribute="bottom" secondItem="kv6-4x-oZP" secondAttribute="bottom" constant="75" id="yq7-8f-CQ4"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="LRG-b3-lHJ"/>
@@ -373,6 +419,267 @@
             </objects>
             <point key="canvasLocation" x="2332" y="809"/>
         </scene>
+        <!--Button Examples View Controller-->
+        <scene sceneID="Nl4-86-H7E">
+            <objects>
+                <viewController storyboardIdentifier="ButtonExamplesViewController" id="6dA-RU-ouI" customClass="ButtonExamplesViewController" customModule="Designable_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Y2-rZ-rW8"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ef-sy-3Oz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ub3-9p-ANT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ZW-NZ-FxV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Joj-Yt-rg8" customClass="DesignableButton" customModule="Designable">
+                                        <rect key="frame" x="32" y="32" width="311" height="52"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="HBs-6Y-INS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Apply">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AJ-tq-Qhu" customClass="DesignableButton" customModule="Designable">
+                                        <rect key="frame" x="32" y="116" width="311" height="52"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="C12-zr-6tl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abp-ke-ley" customClass="DesignableButton" customModule="Designable">
+                                        <rect key="frame" x="32" y="200" width="311" height="52"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="rt3-fx-piq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Success">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jm6-qh-W2a" customClass="DesignableButton" customModule="Designable">
+                                        <rect key="frame" x="32" y="368" width="311" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="ocQ-Hs-hae"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Success">
+                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lr-vy-1jo" customClass="DesignableButton" customModule="Designable">
+                                        <rect key="frame" x="32" y="284" width="311" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="cjY-NA-M6E"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyO-fb-5mx" customClass="DesignableButton" customModule="Designable">
+                                        <rect key="frame" x="162.5" y="452" width="50" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="9hj-CB-TRf"/>
+                                            <constraint firstAttribute="height" constant="50" id="vaK-Mv-ZCN"/>
+                                        </constraints>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="1" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8C-63-iSC" customClass="DesignableFlatButton" customModule="Designable">
+                                        <rect key="frame" x="32" y="534" width="150" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="agz-Ya-Pqt"/>
+                                            <constraint firstAttribute="height" constant="20" id="yT2-3v-S8O"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="square" catalog="system"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="checkmark.square.fill" catalog="system"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Unchecked"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Checked"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="disabledTitleColor">
+                                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="disabledTitle" value="Disabled"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="disabledImage" value="nil"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="checkBoxButtonAction:" destination="6dA-RU-ouI" eventType="touchUpInside" id="Ga1-mM-9HX"/>
+                                        </connections>
+                                    </button>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AUf-CP-K2P">
+                                        <rect key="frame" x="294" y="528.5" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="checkBoxButtonSwitch:" destination="6dA-RU-ouI" eventType="valueChanged" id="tIc-K5-pNQ"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Abp-ke-ley" firstAttribute="trailing" secondItem="9AJ-tq-Qhu" secondAttribute="trailing" id="3kV-eI-Dln"/>
+                                    <constraint firstItem="Jm6-qh-W2a" firstAttribute="trailing" secondItem="Joj-Yt-rg8" secondAttribute="trailing" id="5St-am-AKG"/>
+                                    <constraint firstItem="Joj-Yt-rg8" firstAttribute="top" secondItem="3ZW-NZ-FxV" secondAttribute="top" constant="32" id="7Vd-85-6W0"/>
+                                    <constraint firstItem="9AJ-tq-Qhu" firstAttribute="top" secondItem="Joj-Yt-rg8" secondAttribute="bottom" constant="32" id="9BB-aC-vmJ"/>
+                                    <constraint firstItem="AUf-CP-K2P" firstAttribute="centerY" secondItem="J8C-63-iSC" secondAttribute="centerY" id="9JC-x4-OnF"/>
+                                    <constraint firstAttribute="bottom" secondItem="J8C-63-iSC" secondAttribute="bottom" constant="32" id="Amd-vN-ZPE"/>
+                                    <constraint firstItem="Abp-ke-ley" firstAttribute="leading" secondItem="9AJ-tq-Qhu" secondAttribute="leading" id="BDN-C6-gGK"/>
+                                    <constraint firstAttribute="trailing" secondItem="AUf-CP-K2P" secondAttribute="trailing" constant="32" id="Cij-eR-Guz"/>
+                                    <constraint firstItem="2lr-vy-1jo" firstAttribute="top" secondItem="Abp-ke-ley" secondAttribute="bottom" constant="32" id="DWI-zH-eMT"/>
+                                    <constraint firstItem="1D8-gf-WUQ" firstAttribute="trailing" secondItem="2lr-vy-1jo" secondAttribute="trailing" constant="32" id="DoO-y6-acV"/>
+                                    <constraint firstItem="iyO-fb-5mx" firstAttribute="top" secondItem="Jm6-qh-W2a" secondAttribute="bottom" constant="32" id="JRe-77-WSi"/>
+                                    <constraint firstItem="Jm6-qh-W2a" firstAttribute="leading" secondItem="Joj-Yt-rg8" secondAttribute="leading" id="JRf-jb-NVv"/>
+                                    <constraint firstItem="Joj-Yt-rg8" firstAttribute="centerX" secondItem="3ZW-NZ-FxV" secondAttribute="centerX" id="OhA-ta-UF2"/>
+                                    <constraint firstItem="9AJ-tq-Qhu" firstAttribute="trailing" secondItem="Joj-Yt-rg8" secondAttribute="trailing" id="Tng-Ud-XQp"/>
+                                    <constraint firstItem="2lr-vy-1jo" firstAttribute="leading" secondItem="1D8-gf-WUQ" secondAttribute="leading" constant="32" id="U5r-tX-Xlx"/>
+                                    <constraint firstItem="Jm6-qh-W2a" firstAttribute="top" secondItem="2lr-vy-1jo" secondAttribute="bottom" constant="32" id="Vbv-1E-9f4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Joj-Yt-rg8" secondAttribute="trailing" constant="32" id="YdW-XX-pCE"/>
+                                    <constraint firstItem="J8C-63-iSC" firstAttribute="leading" secondItem="zGh-nc-QNl" secondAttribute="leading" constant="32" id="eG5-3E-hzX"/>
+                                    <constraint firstItem="9AJ-tq-Qhu" firstAttribute="leading" secondItem="Joj-Yt-rg8" secondAttribute="leading" id="gtH-Nw-oZV"/>
+                                    <constraint firstItem="iyO-fb-5mx" firstAttribute="centerX" secondItem="3ZW-NZ-FxV" secondAttribute="centerX" id="jLW-cy-Q68"/>
+                                    <constraint firstItem="Joj-Yt-rg8" firstAttribute="leading" secondItem="3ZW-NZ-FxV" secondAttribute="leading" constant="32" id="n1K-G6-mbX"/>
+                                    <constraint firstItem="J8C-63-iSC" firstAttribute="top" secondItem="iyO-fb-5mx" secondAttribute="bottom" constant="32" id="nfx-IM-oE8"/>
+                                    <constraint firstItem="Abp-ke-ley" firstAttribute="top" secondItem="9AJ-tq-Qhu" secondAttribute="bottom" constant="32" id="xkJ-1H-Yzh"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="zGh-nc-QNl"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="1D8-gf-WUQ"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3ZW-NZ-FxV" firstAttribute="top" secondItem="0Y2-rZ-rW8" secondAttribute="bottom" id="Mhy-G5-TQq"/>
+                            <constraint firstItem="3ZW-NZ-FxV" firstAttribute="leading" secondItem="ub3-9p-ANT" secondAttribute="leading" id="QJ5-so-jwa"/>
+                            <constraint firstItem="4ef-sy-3Oz" firstAttribute="top" secondItem="3ZW-NZ-FxV" secondAttribute="bottom" id="bvb-iO-FxM"/>
+                            <constraint firstAttribute="trailing" secondItem="3ZW-NZ-FxV" secondAttribute="trailing" id="obn-Nx-0k9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="checkButton" destination="J8C-63-iSC" id="r9t-WQ-LRz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zce-gB-Tib" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2975" y="809"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="feY-sy-DOv">
             <objects>
@@ -394,6 +701,9 @@
     </scenes>
     <resources>
         <image name="bg-image" width="656" height="369"/>
+        <image name="checkmark.square.fill" catalog="system" width="64" height="56"/>
         <image name="face" width="600" height="600"/>
+        <image name="nil" width="16" height="16"/>
+        <image name="square" catalog="system" width="64" height="56"/>
     </resources>
 </document>

@@ -1,5 +1,5 @@
 //
-//  Examples.swift
+//  ButtonExamplesViewController.swift
 //  Designable
 //
 //  Copyright (c) 2020 Amalendu Kar
@@ -23,21 +23,29 @@
 //  SOFTWARE.
 //
 
-import Foundation
+import UIKit
+import Designable
 
-struct Examples {
-    var title: String
-    var viewControllerIdentifier: String
-    
-    init(title: String, viewControllerIdentifier: String) {
-        self.title = title
-        self.viewControllerIdentifier = viewControllerIdentifier
+class ButtonExamplesViewController: UIViewController {
+
+    // MARK: - Outlets
+
+    @IBOutlet weak var checkButton: DesignableFlatButton!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        checkButton.addSpaceBetweenImageAndTitle(spacing: 10)
+
     }
-    
-    static var allExamples: [Examples] {
-        let viewExamples = Examples(title: "View Examples", viewControllerIdentifier: "ViewExamplesViewController")
-        let imageViewExamples = Examples(title: "Image View Examples", viewControllerIdentifier: "ImageViewExamplesViewController")
-        let buttonExamples = Examples(title: "Button Examples", viewControllerIdentifier: "ButtonExamplesViewController")
-        return [viewExamples, imageViewExamples, buttonExamples]
+
+    // MARK: - User Interactiona
+
+    @IBAction func checkBoxButtonAction(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
+
+    @IBAction func checkBoxButtonSwitch(_ sender: UISwitch) {
+        checkButton.isEnabled = sender.isOn
     }
 }

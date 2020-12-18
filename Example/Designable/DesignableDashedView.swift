@@ -1,6 +1,5 @@
 //
-//  Examples.swift
-//  Designable
+//  DesignableDashedView.swift
 //
 //  Copyright (c) 2020 Amalendu Kar
 //
@@ -24,20 +23,38 @@
 //
 
 import Foundation
+import Designable
 
-struct Examples {
-    var title: String
-    var viewControllerIdentifier: String
+@IBDesignable
+open class DesignableDashedView: DesignableView {
+
+    // MARK: - Properties
+
+    @IBInspectable open var dashWidth: CGFloat = 0
+
+    @IBInspectable open var dashColor: UIColor = .clear
+
+    @IBInspectable open var dashLength: CGFloat = 0
+
+    @IBInspectable open var betweenDashesSpace: CGFloat = 0
+
+    open var dashBorder: CAShapeLayer?
     
-    init(title: String, viewControllerIdentifier: String) {
-        self.title = title
-        self.viewControllerIdentifier = viewControllerIdentifier
-    }
-    
-    static var allExamples: [Examples] {
-        let viewExamples = Examples(title: "View Examples", viewControllerIdentifier: "ViewExamplesViewController")
-        let imageViewExamples = Examples(title: "Image View Examples", viewControllerIdentifier: "ImageViewExamplesViewController")
-        let buttonExamples = Examples(title: "Button Examples", viewControllerIdentifier: "ButtonExamplesViewController")
-        return [viewExamples, imageViewExamples, buttonExamples]
+    override open func layoutSubviews() {
+        super.layoutSubviews()
+        dashBorder?.removeFromSuperlayer()
+        let dashBorder = CAShapeLayer()
+        dashBorder.lineWidth = dashWidth
+        dashBorder.strokeColor = dashColor.cgColor
+        dashBorder.lineDashPattern = [dashLength, betweenDashesSpace] as [NSNumber]
+        dashBorder.frame = bounds
+        dashBorder.fillColor = nil
+        if cornerRadius > 0 {
+            dashBorder.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
+        } else {
+            dashBorder.path = UIBezierPath(rect: bounds).cgPath
+        }
+        layer.addSublayer(dashBorder)
+        self.dashBorder = dashBorder
     }
 }
