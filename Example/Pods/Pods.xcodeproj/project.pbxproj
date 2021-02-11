@@ -16,6 +16,7 @@
 		B4914E0BD61FD0EEAF11090A5D9E3E95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		DBE1C6DE20E1442133DA24D669ED90FD /* Pods-Designable_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42806C53BEB4C698270528BB2AEB767A /* Pods-Designable_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E46BB3397968CA46B2D2B5324AE8CE1F /* Pods-Designable_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8C5BEF68053819301DB78F19F9803 /* Pods-Designable_Tests-dummy.m */; };
+		F40DFAC725D52CBF00598660 /* DesignableShadowLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DFAC625D52CBF00598660 /* DesignableShadowLayer.swift */; };
 		F4252C2E254B040E009E34C1 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4252C12254B040E009E34C1 /* Color.swift */; };
 		F4252C2F254B040E009E34C1 /* DesignableView+GardientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4252C15254B040E009E34C1 /* DesignableView+GardientLayer.swift */; };
 		F4252C30254B040E009E34C1 /* DesignableGradientDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4252C17254B040E009E34C1 /* DesignableGradientDirection.swift */; };
@@ -84,6 +85,7 @@
 		D8703ABBB4115F0F6CD099D0E75666F3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DAAED88129E65643298E776815A5F2FF /* Pods-Designable_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Designable_Example-umbrella.h"; sourceTree = "<group>"; };
 		DDD0FE4A240D6B71957319B18ADC7374 /* Pods-Designable_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Designable_Example-frameworks.sh"; sourceTree = "<group>"; };
+		F40DFAC625D52CBF00598660 /* DesignableShadowLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableShadowLayer.swift; sourceTree = "<group>"; };
 		F4252C12254B040E009E34C1 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F4252C15254B040E009E34C1 /* DesignableView+GardientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DesignableView+GardientLayer.swift"; sourceTree = "<group>"; };
 		F4252C17254B040E009E34C1 /* DesignableGradientDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableGradientDirection.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				F4252C2B254B040E009E34C1 /* Utils.swift */,
 				F4252C2C254B040E009E34C1 /* Font */,
 				F48EB79D25A4BC560029AAC5 /* CACornerMask+Extension.swift */,
+				F40DFAC625D52CBF00598660 /* DesignableShadowLayer.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				F4252C34254B040E009E34C1 /* DesignableView.swift in Sources */,
 				F4252C2F254B040E009E34C1 /* DesignableView+GardientLayer.swift in Sources */,
 				F4252C3B254B040E009E34C1 /* Utils.swift in Sources */,
+				F40DFAC725D52CBF00598660 /* DesignableShadowLayer.swift in Sources */,
 				F4252C36254B040E009E34C1 /* DesignableButton.swift in Sources */,
 				F4252C39254B040E009E34C1 /* Designable.swift in Sources */,
 				F4252C3A254B040E009E34C1 /* DesignableShadow.swift in Sources */,
