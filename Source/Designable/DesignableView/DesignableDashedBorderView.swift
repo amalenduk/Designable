@@ -1,5 +1,5 @@
 //
-//  DesignableDashedView.swift
+//  DesignableDashedBorderView.swift
 //
 //  Copyright (c) 2020 Amalendu Kar
 //
@@ -25,14 +25,24 @@
 import Foundation
 
 @IBDesignable
-open class DesignableDashedView: DesignableView {
+open class DesignableDashedBorderView: DesignableView {
 
     // MARK: - Properties
 
-    /// Width of the border
+    /* The line width used when stroking the path. Defaults to zero.
+     * Animatable. */
     @IBInspectable open var dashWidth: CGFloat = 0
-    @IBInspectable open var dashColor: UIColor = .clear
+
+    /* The color to fill the path's stroked outline, or nil for no stroking.
+     * Defaults to nil. Animatable. */
+    @IBInspectable open var dashColor: UIColor? = nil
+
+    /* The line length used when stroking the path. Defaults to zero.
+     * Animatable. */
     @IBInspectable open var dashLength: CGFloat = 0
+
+    /* The space between the lines used when stroking the path. Defaults to zero.
+     * Animatable. */
     @IBInspectable open var betweenDashesSpace: CGFloat = 0
 
     open var dashBorder: CAShapeLayer?
@@ -42,7 +52,7 @@ open class DesignableDashedView: DesignableView {
         dashBorder?.removeFromSuperlayer()
         let dashBorder = CAShapeLayer()
         dashBorder.lineWidth = dashWidth
-        dashBorder.strokeColor = dashColor.cgColor
+        dashBorder.strokeColor = dashColor?.cgColor
         dashBorder.lineDashPattern = [dashLength, betweenDashesSpace] as [NSNumber]
         dashBorder.frame = bounds
         dashBorder.fillColor = nil

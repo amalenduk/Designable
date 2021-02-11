@@ -24,13 +24,20 @@
 //
 
 import UIKit
+import Designable
 
 class ViewExamplesViewController: UIViewController {
+
+    // MARK: - Outlets
+
+    @IBOutlet weak var greenView: DesignableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = "View Examples"
+
+        greenView.roundedCorners(corners: [.layerMinXMinYCorner, .layerMaxXMinYCorner], with: (greenView.frame.height / 2))
     }
     
 

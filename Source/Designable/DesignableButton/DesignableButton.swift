@@ -119,8 +119,7 @@ open class DesignableButton: UIButton {
             return layer.cornerRadius
         }
         set {
-            layer.roundCorners(with: fullyRoundedCorners ? frame.size.height / 2 : newValue)
-            // layer.cornerRadius = fullyRoundedCorners ? frame.size.height / 2 : newValue
+            layer.cornerRadius = fullyRoundedCorners ? frame.size.height / 2 : newValue
         }
     }
     
@@ -138,9 +137,16 @@ open class DesignableButton: UIButton {
 
     open func addSpaceBetweenImageAndTitle(spacing: CGFloat) {
         let insetAmount = spacing / 2
-        imageEdgeInsets = UIEdgeInsets(top: 0, left: -insetAmount, bottom: 0, right: title(for: state) == nil || attributedTitle(for: state) == nil ? 0 : insetAmount)
-        titleEdgeInsets = UIEdgeInsets(top: 0, left: image(for: state) == nil ? 0 : insetAmount, bottom: 0, right: -insetAmount)
-        contentEdgeInsets = UIEdgeInsets(top: 0, left: insetAmount, bottom: 0, right: insetAmount)
+
+        if semanticContentAttribute == .forceRightToLeft {
+            imageEdgeInsets = UIEdgeInsets(top: 0, left: title(for: state) == nil || attributedTitle(for: state) == nil ? 0 : insetAmount, bottom: 0, right: -insetAmount)
+            titleEdgeInsets = UIEdgeInsets(top: 0, left: -insetAmount, bottom: 0, right: image(for: state) == nil ? 0 : insetAmount)
+            contentEdgeInsets = UIEdgeInsets(top: 0, left: insetAmount, bottom: 0, right: insetAmount)
+        }else {
+            imageEdgeInsets = UIEdgeInsets(top: 0, left: -insetAmount, bottom: 0, right: title(for: state) == nil || attributedTitle(for: state) == nil ? 0 : insetAmount)
+            titleEdgeInsets = UIEdgeInsets(top: 0, left: image(for: state) == nil ? 0 : insetAmount, bottom: 0, right: -insetAmount)
+            contentEdgeInsets = UIEdgeInsets(top: 0, left: insetAmount, bottom: 0, right: insetAmount)
+        }
     }
 }
 

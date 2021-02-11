@@ -1,5 +1,5 @@
 //
-//  CALayer+Extension.swift
+//  CACornerMask+Extension.swift
 //
 //  Copyright (c) 2020 Amalendu Kar
 //
@@ -22,26 +22,11 @@
 //  SOFTWARE.
 //
 
-import Foundation
 import UIKit
 
-public extension CALayer {
-    func roundCorners(with radius: CGFloat) {
-        cornerRadius = radius
-        masksToBounds = false
-        sublayers?.filter{ $0.frame.equalTo(self.bounds) }
-            .forEach{ $0.cornerRadius = self.cornerRadius }
-        self.contents = nil
-        if let sublayer = sublayers?.first,
-            sublayer.name == "designableShadowLayer" {
-            sublayer.removeFromSuperlayer()
-        }
-        let contentLayer = CALayer()
-        contentLayer.name = "designableShadowLayer"
-        contentLayer.contents = contents
-        contentLayer.frame = bounds
-        contentLayer.cornerRadius = cornerRadius
-        contentLayer.masksToBounds = true
-        insertSublayer(contentLayer, at: 0)
-    }
+extension CACornerMask {
+    public static var leftBottom     : CACornerMask { get { return .layerMinXMaxYCorner}}
+    public static var rightBottom    : CACornerMask { get { return .layerMaxXMaxYCorner}}
+    public static var leftTop        : CACornerMask { get { return .layerMaxXMinYCorner}}
+    public static var rightTop       : CACornerMask { get { return .layerMinXMinYCorner}}
 }

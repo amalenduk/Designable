@@ -35,7 +35,9 @@ class ButtonExamplesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        checkButton.addSpaceBetweenImageAndTitle(spacing: 10)
+        navigationItem.title = "Button Examples"
+
+        checkButton.addSpaceBetweenImageAndTitle(spacing: 8)
 
     }
 

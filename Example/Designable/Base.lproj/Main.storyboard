@@ -259,7 +259,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Myh-AE-8uK" customClass="DesignableView" customModule="Designable">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Myh-AE-8uK" customClass="DesignableDashedBorderView" customModule="Designable">
                                         <rect key="frame" x="137.5" y="452.5" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -282,18 +282,54 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="dashWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dashColor">
+                                                <color key="value" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="dashLength">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="betweenDashesSpace">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHO-2p-3vh" customClass="DesignableView" customModule="Designable">
+                                        <rect key="frame" x="137.5" y="584.5" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Bz7-Ch-vzL"/>
+                                            <constraint firstAttribute="width" secondItem="WHO-2p-3vh" secondAttribute="height" multiplier="1:1" id="fbr-sI-qpE"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="26"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="aCV-5b-FdX" firstAttribute="leading" secondItem="DH4-Z5-fXy" secondAttribute="leading" constant="32" id="4Ej-zH-oti"/>
+                                    <constraint firstItem="WHO-2p-3vh" firstAttribute="top" secondItem="Myh-AE-8uK" secondAttribute="bottom" constant="32" id="80Y-Wp-qMk"/>
                                     <constraint firstAttribute="trailing" secondItem="aCV-5b-FdX" secondAttribute="trailing" constant="32" id="9u3-X1-cPB"/>
+                                    <constraint firstAttribute="bottom" secondItem="WHO-2p-3vh" secondAttribute="bottom" constant="32" id="K32-we-Qkf"/>
                                     <constraint firstItem="8DD-6P-hcN" firstAttribute="top" secondItem="aCV-5b-FdX" secondAttribute="bottom" constant="16" id="O3d-DH-pli"/>
                                     <constraint firstItem="aCV-5b-FdX" firstAttribute="top" secondItem="DH4-Z5-fXy" secondAttribute="top" constant="16" id="RcU-xj-nrt"/>
                                     <constraint firstItem="8DD-6P-hcN" firstAttribute="leading" secondItem="DH4-Z5-fXy" secondAttribute="leading" constant="32" id="ZRH-YW-Chb"/>
                                     <constraint firstItem="Myh-AE-8uK" firstAttribute="top" secondItem="8DD-6P-hcN" secondAttribute="bottom" constant="16" id="a6H-wh-joy"/>
+                                    <constraint firstItem="WHO-2p-3vh" firstAttribute="centerX" secondItem="DH4-Z5-fXy" secondAttribute="centerX" id="bLE-Dp-Yk8"/>
                                     <constraint firstAttribute="trailing" secondItem="8DD-6P-hcN" secondAttribute="trailing" constant="32" id="eZo-ZQ-4IR"/>
-                                    <constraint firstAttribute="bottom" secondItem="Myh-AE-8uK" secondAttribute="bottom" constant="32" id="nDP-wb-XBg"/>
                                     <constraint firstItem="Myh-AE-8uK" firstAttribute="centerX" secondItem="DH4-Z5-fXy" secondAttribute="centerX" id="ovu-FA-stF"/>
                                     <constraint firstItem="aCV-5b-FdX" firstAttribute="centerX" secondItem="DH4-Z5-fXy" secondAttribute="centerX" id="whw-OQ-Iuo"/>
                                 </constraints>
@@ -309,6 +345,9 @@
                             <constraint firstItem="DH4-Z5-fXy" firstAttribute="leading" secondItem="OVb-Av-mRF" secondAttribute="leading" id="fH2-Ib-hay"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenView" destination="WHO-2p-3vh" id="v6f-bq-AUi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tGQ-6r-6cB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -329,13 +368,24 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcw-La-gTE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-image" translatesAutoresizingMaskIntoConstraints="NO" id="kv6-4x-oZP">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-image" translatesAutoresizingMaskIntoConstraints="NO" id="kv6-4x-oZP" customClass="DesignableImageView" customModule="Designable">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="kv6-4x-oZP" secondAttribute="height" multiplier="16:9" id="esv-uX-8Kw"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face" translatesAutoresizingMaskIntoConstraints="NO" id="MYD-Vx-f2f" customClass="DesignableImageView" customModule="Designable">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face" translatesAutoresizingMaskIntoConstraints="NO" id="MYD-Vx-f2f" customClass="DesignableImageView" customModule="Designable">
                                         <rect key="frame" x="112.5" y="136" width="150" height="150"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -356,34 +406,11 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face" translatesAutoresizingMaskIntoConstraints="NO" id="4li-dY-Ht6" customClass="DesignableImageView" customModule="Designable">
-                                        <rect key="frame" x="112.5" y="318" width="150" height="150"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="SaP-jK-dIW"/>
-                                            <constraint firstAttribute="height" constant="150" id="i3T-DK-3Yf"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                <size key="value" width="0.0" height="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="4"/>
+                                                <real key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
@@ -391,9 +418,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="kv6-4x-oZP" secondAttribute="trailing" id="9y5-Uk-DUD"/>
                                     <constraint firstItem="kv6-4x-oZP" firstAttribute="top" secondItem="gcw-La-gTE" secondAttribute="top" id="PYv-5P-KlL"/>
-                                    <constraint firstItem="4li-dY-Ht6" firstAttribute="centerX" secondItem="gcw-La-gTE" secondAttribute="centerX" id="QS4-Oa-Pb2"/>
-                                    <constraint firstItem="4li-dY-Ht6" firstAttribute="top" secondItem="MYD-Vx-f2f" secondAttribute="bottom" constant="32" id="Tu8-Qg-mVk"/>
-                                    <constraint firstAttribute="bottom" secondItem="4li-dY-Ht6" secondAttribute="bottom" constant="32" id="V2c-oU-vGO"/>
+                                    <constraint firstAttribute="bottom" secondItem="MYD-Vx-f2f" secondAttribute="bottom" constant="32" id="QvK-I4-vtk"/>
                                     <constraint firstItem="kv6-4x-oZP" firstAttribute="leading" secondItem="gcw-La-gTE" secondAttribute="leading" id="VkJ-71-fxk"/>
                                     <constraint firstItem="MYD-Vx-f2f" firstAttribute="centerX" secondItem="gcw-La-gTE" secondAttribute="centerX" id="jdf-00-N6k"/>
                                     <constraint firstItem="kv6-4x-oZP" firstAttribute="centerX" secondItem="gcw-La-gTE" secondAttribute="centerX" id="mmr-dg-bHs"/>
@@ -412,6 +437,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="headerImageView" destination="kv6-4x-oZP" id="OLb-pM-ugz"/>
                         <outlet property="profileImageView" destination="MYD-Vx-f2f" id="p3U-Eg-uJN"/>
                     </connections>
                 </viewController>
@@ -600,7 +626,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8C-63-iSC" customClass="DesignableFlatButton" customModule="Designable">
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="playback" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8C-63-iSC" customClass="DesignableFlatButton" customModule="Designable">
                                         <rect key="frame" x="32" y="534" width="150" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="agz-Ya-Pqt"/>
@@ -623,6 +649,9 @@
                                                 <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="image" keyPath="disabledImage" value="nil"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="space">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="checkBoxButtonAction:" destination="6dA-RU-ouI" eventType="touchUpInside" id="Ga1-mM-9HX"/>

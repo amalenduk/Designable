@@ -32,32 +32,48 @@ public protocol DesignableCorner: Designable {
     
     /// When positive, the background of the layer will be drawn with fully rounded corners.
     var fullyRoundedCorners: Bool { get set }
+    
 }
 
-public extension DesignableCorner where Self: UIView {
+public extension DesignableCorner where Self: DesignableView {
     
     /// Update cornerRadius of the  view
     func updateCornerRadius() {
         layoutIfNeeded()
-        self.layer.roundCorners(with: fullyRoundedCorners ? frame.height / 2 : cornerRadius)
-        // self.layer.cornerRadius = fullyRoundedCorners ? frame.height / 2 : cornerRadius
+        self.layer.cornerRadius = fullyRoundedCorners ? frame.height / 2 : cornerRadius
+    }
+    
+    mutating func roundedCorners(corners: CACornerMask, with radius: CGFloat) {
+        cornerRadius = radius
+        layer.maskedCorners = corners
+        drawShadow()
     }
 }
 
-public extension DesignableCorner where Self: UIButton {
+public extension DesignableCorner where Self: DesignableButton {
     
     /// Update cornerRadius of the  button
     func updateCornerRadius() {
-        self.layer.roundCorners(with: fullyRoundedCorners ? frame.height / 2 : cornerRadius)
-        // self.layer.cornerRadius = fullyRoundedCorners ? frame.height / 2 : cornerRadius
+        self.layer.cornerRadius = fullyRoundedCorners ? frame.height / 2 : cornerRadius
+    }
+    
+    mutating func roundedCorners(corners: CACornerMask, with radius: CGFloat) {
+        cornerRadius = radius
+        layer.maskedCorners = corners
+        drawShadow()
     }
 }
 
-public extension DesignableCorner where Self: UIImageView {
+public extension DesignableCorner where Self: DesignableImageView {
     
     /// Updates cornerRadius of  the image view
     func updateCornerRadius() {
-        self.layer.roundCorners(with: fullyRoundedCorners ? frame.height / 2 : cornerRadius)
-        // self.layer.cornerRadius = fullyRoundedCorners ? frame.height / 2 : cornerRadius
+        self.layer.cornerRadius = fullyRoundedCorners ? frame.height / 2 : cornerRadius
+    }
+    
+    mutating func roundedCorners(corners: CACornerMask, with radius: CGFloat) {
+        cornerRadius = radius
+        layer.maskedCorners = corners
+        drawShadow()
     }
 }

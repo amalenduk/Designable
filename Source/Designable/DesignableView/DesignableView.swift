@@ -119,8 +119,7 @@ open class DesignableView: UIView {
             return layer.cornerRadius
         }
         set {
-            layer.roundCorners(with: fullyRoundedCorners ? frame.size.height / 2 : newValue)
-            // layer.cornerRadius = fullyRoundedCorners ? frame.size.height / 2 : newValue
+            layer.cornerRadius = fullyRoundedCorners ? frame.size.height / 2 : newValue
         }
     }
     
